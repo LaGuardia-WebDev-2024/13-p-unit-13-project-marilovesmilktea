@@ -1,8 +1,8 @@
 <!-- Unit 13 Project
 Requirements
-[  ] Two Interactive Drop-down Inputs 
-[  ] Two Different jQuery Animation Methods 
-[  ] Add Five CSS Declarations
+[yes] Two Interactive Drop-down Inputs 
+[yes] Two Different jQuery Animation Methods 
+[yes] Add Five CSS Declarations
 [  ] Include Three Images
 
 Select ONE Additional Feature to Add  
@@ -21,67 +21,99 @@ Select ONE Additional Feature to Add
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <h1>Quiz About [Me]</h1>
+    <center><h1>⋆˚࿔ mari quiz time! 𝜗𝜚˚⋆</h1>
     <hr />
     <!-- Movie Question -->
     <form id="movie-form">
       <label>
-        🎥 What is my favorite movie?
-        <select id="movie-answer">
-          <option value="movie1">movie 1</option>
-          <option value="movie2">movie 2</option>
-          <option value="movie3">movie 3</option>
-          <option value="movie4">movie 4</option>
+        ฅ^._.^ฅ who is my most-listened to artist on spotify this year?
+         
+       
+        <select id="music-answer">
+          <option value="music1">doechii</option>
+          <option value="music2">twice</option>
+          <option value="music3">sabrina carpenter</option>
+          <option value="music4">flo</option>
         </select>
       </label>
-      <button type="submit">Check Movie Answer</button>
+      <button type="submit">did you get it right?</button>
     </form>
-    <div id="movie-result"></div>
+    <div id="music-result"> <p class="sabrinafacts">˚ʚ♡ɞ˚</p>
+      <img
+           id="sabrina"
+           src= "https://cdn.glitch.global/1a178f35-4f2f-4b61-a13d-dae259ecfecf/IMG_0798.jpeg?v=1747067031925"
+          width="100"
+          style="display: none"
+             /></div>
     <hr />
     <!-- Book Question -->
-    <form id="book-form">
+    <form id="cartoon-form">
       <label>
-        📖 What is my favorite book?
-        <select id="book-answer">
-          <option value="book1">book 1</option>
-          <option value="book2">book 2</option>
-          <option value="book3">book 3</option>
-          <option value="book4">book 4</option>
+        ꒰ᐢ. .ᐢ꒱ what is my favorite cartoon?
+        <select id="cartoon-answer">
+          <option value="cartoon1">bluey</option>
+          <option value="cartoon2">teen titans go!</option>
+          <option value="cartoon3">the amazing world of gumball</option>
+          <option value="cartoon4">steven universe</option>
         </select>
       </label>
-      <button type="submit">Check Book Answer</button>
+      <button type="submit">you gotta check again bookie..</button>
     </form>
-    <div id="book-result"></div>
+    <div id="cartoon-result"><p class="cartoonfacts">˚ʚ♡ɞ˚</p>
+      <img
+           id="pink"
+           src= "https://cdn.glitch.global/1a178f35-4f2f-4b61-a13d-dae259ecfecf/IMG_0799.jpeg?v=1747067036919"
+          width="100"
+          style="display: none"
+           />
+      </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script>
       //Movie Question jQuery Code
       $("#movie-form").on("submit", function (event) {
         event.preventDefault();
 
-        var $answer = $("#movie-answer");
+        var $answer = $("#music-answer");
         var answer = $answer.val();
 
-        if (answer === "movie1") {
-          $("#movie-result").text("YESSSS!");
-        } else {
-          $("#movie-result").text("Try Again!");
+        if (answer === "music3") {
+          $(".sabrinafacts").text("finally.. damn. good job babe!");
+          
+          $("#sabrina").hide().attr("src",
+          "https://cdn.glitch.global/1a178f35-4f2f-4b61-a13d-dae259ecfecf/IMG_0798.jpeg?v=1747067031925").show(1500)
+        } else if (answer == "music2"){
+          $(".sabrinafacts").text("try again honey .. this answer is easy. i freaking love these girls though.");
+        } else if (answer == "music1"){
+          $(".sabrinafacts").text("i LOVE this woman. but unfortunately.. naur.")
+        } else if (answer == "music4"){
+          $(".sabrinafacts").text("GIRL. LOVE THEM!! BUT THE ANSWER IS EASY!!!")
         }
+        
+      
       });
 
       //Book Question jQuery Code
-      $("#book-form").on("submit", function (event) {
+      $("#cartoon-form").on("submit", function (event) {
         event.preventDefault();
 
-        var $answer = $("#book-answer");
+        var $answer = $("#cartoon-answer");
         var answer = $answer.val();
 
-        if (answer === "book1") {
-          $("#book-result").text("YESSSS!");
-        } else {
-          $("#book-result").text("Try Again!");
+        if (answer === "cartoon4") {
+          $(".cartoonfacts").text("ding ding! this show is my childhooddd, rose quartz is my favorite!");
+          
+          $("#pink").hide().attr("src",
+          "https://cdn.glitch.global/1a178f35-4f2f-4b61-a13d-dae259ecfecf/IMG_0799.jpeg?v=1747067036919").fadeIn(1500)
+        } 
+        else if (answer == "cartoon1"){
+          $(".cartoonfacts").text("ugh this is definitely a favorite of mine, but this isn't the answer!");
+        } else if (answer == "cartoon2"){
+          $(".cartoonfacts").text("THIS SHOW SHAPED MY HUMOR.. but no lolz.")
+        } else if (answer == "cartoon3"){
+          $(".cartoonfacts").text("this show ALSO shaped my humor, but also nooo!")
         }
       });
-    </script>
+    </script></center>
   </body>
 
   <!--- Taken From Khan Academy HTML/JS: Making webpages interactive with jQuery-->
