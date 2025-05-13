@@ -1,22 +1,49 @@
-#movie-result {
-  background: rgb(244, 98, 181);
-  border: 5px solid black;
-  font-size: 24px;
-  height: 160px;
+#music-result {
+  background: rgb(255, 227, 225 );
+  border: 5px double rgb(255, 209, 209 );
+  border-radius: 10px;
+  font-size: 20px;
+  
   margin-top: 10px;
   margin-bottom: 20px;
 }
 
-#book-result {
-  background: rgb(196, 159, 255);
-  border: 5px solid black;
-  font-size: 24px;
-  height: 160px;
+#cartoon-result {
+  background: rgb(255, 227, 225 );
+  border: 5px double rgb(255, 209, 209 );
+  border-radius: 10px;
+  font-size: 20px;
+  color: rgb(240, 130, 175);
   margin-top: 10px;
   margin-bottom: 20px;
 }
 
 hr {
-  height: 5px;
-  background-color: black;
+  height: 4px;
+  background-color: rgb(255, 148, 148);
+}
+body {
+  background: rgb(255, 245, 228);
+  width: 900px;
+  padding-bottom: 50px;
+  margin: auto;
+}
+button {
+  background-color: rgb(193, 160, 127);
+  border: solid rgb(225, 197, 170);
+}
+h1 {
+  color: rgb(243, 192, 213 );
+}
+.sabrinafacts {
+  color: rgb(240, 130, 175);
+}
+.cartoonfacts {
+  color: rgb(240, 130, 175);
+}
+html {
+  background-image: url(https://cdn.glitch.global/1a178f35-4f2f-4b61-a13d-dae259ecfecf/IMG_0807.jpeg?v=1747152816910);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
